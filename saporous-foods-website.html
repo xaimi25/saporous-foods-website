@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saporous Foods — Pulao Kabab &amp; Pizza Delight, Multan</title>
+<meta name="description" content="Saporous Foods Multan — Saporous Chicken Pulao, Kabab, Pizzas, Krispo burgers & more. Bosan Road, Gulgasht, opposite Emerson University. Open daily 9 AM – 1 AM. Order on WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--pink:#ec4899;--pink-d:#be185d;--purple:#7c3aed;--dark:#150f1a;--dark2:#1e1424;--card:#241a2e;--cream:#fdf7ff;--muted:#c4b5cc;--gold:#fbbf24}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--cream);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  section{scroll-margin-top:76px}
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(21,15,26,.95);backdrop-filter:blur(6px);border-bottom:1px solid #33263f}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1100px;margin:0 auto}
+  .logo{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:1px}
+  .logo span{color:var(--pink)}
+  .nav-links{display:flex;gap:22px;font-size:14px;font-weight:600;color:var(--muted)}
+  .nav-links a{padding:6px 2px}
+  .nav-links a:hover{color:var(--cream)}
+  .btn{display:inline-block;background:var(--pink);color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;font-size:15px;border:0;cursor:pointer}
+  .btn:hover{background:var(--pink-d)}
+  .btn-ghost{background:transparent;border:1.5px solid var(--pink);color:#fff}
+  .btn-ghost:hover{background:var(--pink)}
+  /* hero slider */
+  .hero{background:radial-gradient(ellipse at 50% 0%,#3b0764 0%,#150f1a 62%)}
+  .hero-slider{position:relative;overflow:hidden}
+  .slide{display:none;padding:72px 20px 16px;text-align:center;animation:fade .6s ease}
+  .slide.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  .slide .kicker{color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:13px}
+  .slide h1{font-family:'Playfair Display',serif;font-size:52px;line-height:1.08;margin:16px 0 8px}
+  .slide h1 em{color:var(--pink);font-style:normal}
+  .slide .urdu{font-size:22px;color:#e9d5ff;margin-bottom:12px}
+  .slide p{color:var(--muted);font-size:18px;max-width:640px;margin:0 auto 26px}
+  .slide .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .trust{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:34px;font-size:14px;color:var(--muted)}
+  .trust b{color:var(--cream)}
+  .dots{display:flex;gap:8px;justify-content:center;padding:22px 0 34px}
+  .dot{width:10px;height:10px;border-radius:999px;border:0;background:#5b4a68;cursor:pointer;padding:0;transition:all .3s ease}
+  .dot.active{background:var(--pink);width:28px}
+  /* sections */
+  section{padding:56px 0}
+  h2{font-family:'Playfair Display',serif;font-size:34px;margin-bottom:6px}
+  .sub{color:var(--muted);margin-bottom:28px}
+  /* signature */
+  .sig{background:linear-gradient(135deg,#4c1d95,#be185d);border-radius:18px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .sig h3{font-family:'Playfair Display',serif;font-size:28px}
+  .sig p{color:#fce7f3}
+  /* quick links */
+  .quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:36px}
+  .quick-card{background:var(--card);border:1px solid #3a2b47;border-radius:16px;padding:26px;display:block}
+  .quick-card:hover{border-color:var(--pink)}
+  .quick-card h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:6px}
+  .quick-card p{color:var(--muted);font-size:14px}
+  .quick-card .go{color:var(--pink);font-weight:700;font-size:14px;display:block;margin-top:12px}
+  /* menu */
+  #menu h2::after{content:'';display:block;width:64px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--pink),var(--gold));margin-top:10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid #3a2b47;border-radius:16px;padding:24px;position:relative;overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--pink),var(--purple))}
+  .card:hover{transform:translateY(-4px);border-color:var(--pink);box-shadow:0 14px 32px rgba(236,72,153,.18)}
+  .card .tag{display:inline-block;background:#3b0764;color:#d8b4fe;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+  .card .tag.hot{background:linear-gradient(90deg,#f59e0b,#ec4899);color:#fff}
+  .cat-icon{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#4c1d95,#be185d);font-size:22px;margin-right:10px;vertical-align:middle}
+  .card h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:8px}
+  .card ul{list-style:none}
+  .card li{padding:9px 8px;border-bottom:1px dashed #443554;color:#ece3f2;font-size:15px;border-radius:8px;transition:background .2s ease}
+  .card li:hover{background:rgba(236,72,153,.08)}
+  .card li:last-child{border-bottom:0}
+  .card li .pr{float:right;color:var(--gold);font-weight:700;background:rgba(251,191,36,.12);padding:2px 10px;border-radius:999px;font-size:14px}
+  .card li .pr.na{color:var(--muted);font-weight:600;font-size:13px;background:transparent;padding:2px 0}
+  .card li span{display:block;font-size:13px;color:var(--muted)}
+  .card .note{font-size:13px;color:var(--muted);margin-top:12px}
+  /* daig */
+  .daig{background:var(--card);border:1px solid #3a2b47;border-radius:16px;padding:28px}
+  .daig h3{font-family:'Playfair Display',serif;font-size:26px;margin-bottom:8px}
+  .daig p{color:var(--muted);margin-bottom:18px}
+  .daig ul{list-style:none;columns:2;column-gap:32px}
+  .daig li{padding:8px 0;border-bottom:1px dashed #443554;font-size:15px;break-inside:avoid}
+  .daig li .pr{float:right;color:var(--gold);font-weight:700}
+  .daig li span{display:block;font-size:13px;color:var(--muted)}
+  /* visit */
+  .visit{background:var(--card);border:1px solid #3a2b47;border-radius:16px;padding:26px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+  .visit h3{font-family:'Playfair Display',serif;font-size:22px}
+  .visit p{color:var(--muted);font-size:15px}
+  .visit .actions{display:flex;gap:10px;flex-wrap:wrap}
+  .contact-lines{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+  .contact-lines .card p{color:var(--muted);font-size:15px}
+  .contact-lines .card p b{color:var(--cream)}
+  /* footer */
+  footer{border-top:1px solid #33263f;padding:36px 0;text-align:center;color:var(--muted);font-size:14px}
+  footer .logo{font-size:22px}
+  footer a{color:var(--cream);font-weight:600}
+  /* cart */
+  .add-btn{background:linear-gradient(135deg,var(--pink),var(--purple));border:0;color:#fff;font-weight:700;font-size:13px;padding:6px 16px;border-radius:999px;cursor:pointer;margin-top:8px;box-shadow:0 4px 12px rgba(236,72,153,.35);transition:transform .2s ease,box-shadow .2s ease}
+  .add-btn:hover{transform:scale(1.05);box-shadow:0 6px 16px rgba(236,72,153,.5)}
+  .item-control{display:block;margin-top:8px}
+  .stepper{display:inline-flex;align-items:center;gap:10px}
+  .stepper button{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--pink);background:transparent;color:#fff;font-size:16px;cursor:pointer;line-height:1}
+  .stepper button:hover{background:var(--pink)}
+  .stepper b{min-width:18px;text-align:center;font-size:15px}
+  .cart-fab.bump{animation:bump .3s ease}
+  @keyframes bump{50%{transform:scale(1.08)}}
+  .cart-fab{position:fixed;right:18px;bottom:18px;z-index:90;display:none;align-items:center;gap:8px;background:var(--pink);color:#fff;font-weight:700;padding:13px 20px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.45);font-size:15px}
+  .cart-fab .count{background:#fff;color:#be185d;border-radius:999px;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;padding:0 6px}
+  .cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:95;display:none}
+  .cart-overlay.open{display:block}
+  .cart-drawer{position:fixed;top:0;right:0;height:100%;width:min(380px,92vw);background:#1e1424;z-index:100;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column;border-left:1px solid #3a2b47}
+  .cart-drawer.open{transform:translateX(0)}
+  .cart-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid #3a2b47}
+  .cart-head h3{font-family:'Playfair Display',serif;font-size:22px}
+  .cart-head button{background:none;border:0;color:var(--muted);font-size:22px;cursor:pointer}
+  #cartItems{flex:1;overflow-y:auto;padding:12px 20px}
+  .cart-empty{color:var(--muted);text-align:center;padding:30px 0}
+  .cart-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px dashed #3a2b47}
+  .cart-item .nm{font-weight:600;font-size:15px}
+  .cart-item .pr{font-size:13px;color:var(--muted)}
+  .qty{display:flex;align-items:center;gap:10px}
+  .qty button{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--pink);background:transparent;color:#fff;font-size:16px;cursor:pointer;line-height:1}
+  .cart-foot{padding:18px 20px;border-top:1px solid #3a2b47}
+  .cart-line{display:flex;justify-content:space-between;font-size:15px;padding:2px 0}
+  .cart-total{display:flex;justify-content:space-between;font-weight:800;font-size:17px;padding-top:8px;margin-top:6px;border-top:1px solid #3a2b47}
+  .cart-note{font-size:13px;color:var(--muted);margin:10px 0 12px}
+  @media(max-width:640px){.slide h1{font-size:36px}.nav-links{display:none}.daig ul{columns:1}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">SAPOROUS <span>FOODS</span></a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#deals">Deals</a>
+      <a href="#daig">Daig Orders</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="https://wa.me/923091555506?text=Assalam-o-Alaikum!%20I%20want%20to%20order%20from%20Saporous%20Foods%20Multan.">Order on WhatsApp</a>
+  </div>
+</header>
+
+<!-- ============ HERO SLIDER (3 slides, 3 dots) ============ -->
+<div class="hero" id="home">
+  <div class="hero-slider" id="heroSlider">
+    <div class="slide active">
+      <div class="wrap">
+        <div class="kicker">Pulao Kabab &amp; Pizza Delight &bull; Multan</div>
+        <h1>Saporous <em>Chicken Pulao</em>, Kabab &amp; Pizza</h1>
+        <div class="urdu">روایتوں کا امین</div>
+        <p>Multan&rsquo;s favourite pulao &mdash; aromatic chicken pulao with shami kabab, plus fresh pizzas, Krispo burgers and fast food, all under one roof.</p>
+        <div class="hero-cta">
+          <a class="btn" href="https://wa.me/923091555506?text=Assalam-o-Alaikum!%20I%20want%20to%20order%20from%20Saporous%20Foods%20Multan.">Order on WhatsApp</a>
+          <a class="btn btn-ghost" href="#menu">View Menu</a>
+        </div>
+        <div class="trust">
+          <span>Bosan Road, <b>Gulgasht, Multan</b></span>
+          <span>Open daily <b>9 AM &ndash; 1 AM</b></span>
+          <span>Home delivery <b>Rs. 30 / order</b></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="wrap">
+        <div class="kicker">Deals &bull; Sharing Packs</div>
+        <h1>Deals from <em>Rs. 699</em></h1>
+        <p>Pizza deals, value deals &amp; family packs &mdash; Single Slice Delight Rs. 750, Couple&rsquo;s Cravy Rs. 2999, Birthday Feast Rs. 4990. Perfect for sharing.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#deals">View All Deals</a>
+          <a class="btn btn-ghost" href="https://wa.me/923091555506?text=Assalam-o-Alaikum!%20I%20want%20to%20order%20a%20deal%20from%20Saporous%20Foods%20Multan.">Order on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="wrap">
+        <div class="kicker">Shadi &bull; Dawat &bull; Gatherings</div>
+        <h1>Bulk <em>Daig</em> Orders</h1>
+        <p>Chicken Pulao Daig Rs. 17000, Chicken Biryani Daig Rs. 20000, Mutton Biryani Daig Rs. 38000 &mdash; fresh, on time, Multan bhar mein.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#daig">View Daig Menu</a>
+          <a class="btn btn-ghost" href="https://wa.me/923091555506?text=Assalam-o-Alaikum!%20I%20want%20to%20book%20a%20bulk%20Daig%20order%20from%20Saporous%20Foods%20Multan.">Book Daig on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="dots">
+      <button class="dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+      <button class="dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+      <button class="dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SIGNATURE ============ -->
+<section>
+  <div class="wrap">
+    <h2>Our Signature</h2>
+    <p class="sub">The plate Multan is talking about.</p>
+    <div class="sig">
+      <div>
+        <h3>Saporous Pulao</h3>
+        <p>Fragrant rice with tender chicken, two shami kababs, fresh salad &amp; traditional raita &mdash; served with onion rings.</p>
+      </div>
+      <button class="btn" style="background:#fff;color:#be185d" onclick="addToCart('Chicken Pulao Single',580)">Add to Cart &mdash; Rs. 580</button>
+    </div>
+
+    <div class="quick">
+      <a class="quick-card" href="#menu">
+        <h3>Explore Menu</h3>
+        <p>Pulao Kabab, Pizzas, Pasta, Krispo burgers, Sweets &amp; Drinks &mdash; full menu with prices.</p>
+        <span class="go">View Menu &rarr;</span>
+      </a>
+      <a class="quick-card" href="#deals">
+        <h3>Today&rsquo;s Deals</h3>
+        <p>Pizza deals, value deals &amp; family packs from Rs. 699 &mdash; perfect for sharing.</p>
+        <span class="go">View Deals &rarr;</span>
+      </a>
+      <a class="quick-card" href="#daig">
+        <h3>Bulk Daig Orders</h3>
+        <p>Shadi ya dawat? Chicken Pulao Daig from Rs. 17000 &mdash; book in advance.</p>
+        <span class="go">View Daig Menu &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section id="menu">
+  <div class="wrap">
+    <h2>Our Menu</h2>
+    <p class="sub">Prices as per the restaurant&rsquo;s menu. Tap <b>Add</b> to build your order, then confirm on WhatsApp.</p>
+    <div class="grid">
+
+      <div class="card">
+        <span class="tag">Signature</span>
+        <span class="tag hot">&#9733; Most Ordered</span>
+        <h3><span class="cat-icon">&#127831;</span>Pulao Kabab</h3>
+        <ul>
+          <li data-name="Chicken Pulao Single" data-price="580">Chicken Pulao Single <b class="pr">Rs. 580</b></li>
+          <li data-name="Chicken Pulao Single (Choice Piece)" data-price="599">Chicken Pulao Single (Choice Piece) <b class="pr">Rs. 599</b></li>
+          <li data-name="Chicken Pulao Single (without Kabab)" data-price="499">Chicken Pulao Single (without Kabab) <b class="pr">Rs. 499</b></li>
+          <li data-name="Chicken Pulao Special" data-price="699">Chicken Pulao Special <b class="pr">Rs. 699</b></li>
+          <li data-name="Chicken Pulao Special (Choice Piece)" data-price="720">Chicken Pulao Special (Choice Piece) <b class="pr">Rs. 720</b></li>
+          <li data-name="Chicken Pulao Special (without Kabab)" data-price="649">Chicken Pulao Special (without Kabab) <b class="pr">Rs. 649</b></li>
+          <li data-name="Pulao Kabab" data-price="449">Pulao Kabab <b class="pr">Rs. 449</b><span>Rice with two shami kabab, salad &amp; raita</span></li>
+          <li data-name="Simple Pulao" data-price="380">Simple Pulao <b class="pr">Rs. 380</b></li>
+          <li data-name="Shami Kabab (Per Dozen)" data-price="700">Shami Kabab (Per Dozen) <b class="pr">Rs. 700</b></li>
+          <li data-name="Chicken Piece" data-price="180">Chicken Piece <b class="pr">Rs. 180</b></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="tag">Roast &amp; Extras</span>
+        <h3><span class="cat-icon">&#128293;</span>Chicken Roast</h3>
+        <ul>
+          <li data-name="Chicken Roast (Full)" data-price="1349">Chicken Roast (Full) <b class="pr">Rs. 1349</b></li>
+          <li data-name="Chicken Roast (Half)" data-price="699">Chicken Roast (Half) <b class="pr">Rs. 699</b></li>
+          <li data-name="Chicken Roast (Quarter)" data-price="369">Chicken Roast (Quarter) <b class="pr">Rs. 369</b></li>
+          <li data-name="Extra Raita" data-price="30">Extra Raita <b class="pr">Rs. 30</b></li>
+          <li data-name="Extra Sauce" data-price="30">Extra Sauce <b class="pr">Rs. 30</b></li>
+          <li data-name="Ketchup" data-price="30">Ketchup <b class="pr">Rs. 30</b></li>
+          <li data-name="Mint Margarita" data-price="299">Mint Margarita <b class="pr">Rs. 299</b></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="tag">Pizzas</span>
+        <h3><span class="cat-icon">&#127829;</span>Classic Pizzas</h3>
+        <ul>
+          <li data-name="Saporous Signature Pizza (Medium)" data-price="1450">Saporous Signature Pizza <b class="pr">Rs. 1450</b><span>Medium &mdash; Large Rs. 1900, X-Large Rs. 2550</span></li>
+          <li data-name="Crown Crust Pizza (Medium)" data-price="1450">Crown Crust Pizza <b class="pr">Rs. 1450</b><span>Medium &mdash; Large Rs. 1900, X-Large Rs. 2550</span></li>
+          <li data-name="Classic Euro Pizza (Medium)" data-price="1450">Classic Euro Pizza <b class="pr">Rs. 1450</b><span>Medium &mdash; Large Rs. 1900, X-Large Rs. 2550</span></li>
+          <li data-name="Behari Kabab Pizza (Medium)" data-price="1450">Behari Kabab Pizza <b class="pr">Rs. 1450</b><span>Medium &mdash; Large Rs. 1900, X-Large Rs. 2550</span></li>
+          <li data-name="Double Delight XL Pizza" data-price="2550">Double Delight XL <b class="pr">Rs. 2550</b><span>Special &amp; Traditional flavours</span></li>
+          <li data-name="Special Peri Peri Pizza">Special Peri Peri Pizza <b class="pr na">Price on WhatsApp</b><span>Favourite Pizzas</span></li>
+          <li data-name="Deluxe Pizza">Deluxe Pizza <b class="pr na">Price on WhatsApp</b><span>Favourite Pizzas</span></li>
+          <li data-name="Malai Boti Pizza">Malai Boti Pizza <b class="pr na">Price on WhatsApp</b><span>Favourite Pizzas</span></li>
+          <li data-name="Chicken Supreme Pizza">Chicken Supreme Pizza <b class="pr na">Price on WhatsApp</b><span>Favourite Pizzas</span></li>
+          <li data-name="Mayo Garlic Pizza">Mayo Garlic Pizza <b class="pr na">Price on WhatsApp</b><span>Favourite Pizzas</span></li>
+          <li data-name="Hot Sicilian Pizza">Hot Sicilian Pizza <b class="pr na">Price on WhatsApp</b><span>Favourite Pizzas</span></li>
+          <li data-name="Cheesy Cheese Pizza">Cheesy Cheese Pizza <b class="pr na">Price on WhatsApp</b><span>Favourite Pizzas</span></li>
+          <li data-name="Veggie Deluxe Pizza">Veggie Deluxe Pizza <b class="pr na">Price on WhatsApp</b><span>Ultimate Pizzas</span></li>
+          <li data-name="Chicken Fajita Pizza">Chicken Fajita Pizza <b class="pr na">Price on WhatsApp</b><span>Ultimate Pizzas</span></li>
+          <li data-name="Chicken Tikka Pizza">Chicken Tikka Pizza <b class="pr na">Price on WhatsApp</b><span>Ultimate Pizzas</span></li>
+        </ul>
+        <p class="note">Add button adds Medium size. Large / X-Large size WhatsApp par select karein.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Pasta &amp; Rolls</span>
+        <h3><span class="cat-icon">&#127836;</span>Pasta, Rolls &amp; Platter</h3>
+        <ul>
+          <li data-name="Malai Botti Pasta" data-price="999">Malai Botti Pasta <b class="pr">Rs. 999</b></li>
+          <li data-name="Crunchy Pasta" data-price="1150">Crunchy Pasta <b class="pr">Rs. 1150</b></li>
+          <li data-name="Macroni Pasta" data-price="899">Macroni Pasta <b class="pr">Rs. 899</b></li>
+          <li data-name="Lasaga Pasta" data-price="895">Lasaga Pasta <b class="pr">Rs. 895</b></li>
+          <li data-name="Blazing Pasta" data-price="945">Blazing Pasta <b class="pr">Rs. 945</b></li>
+          <li data-name="Malai Botti Roll" data-price="749">Malai Botti Roll <b class="pr">Rs. 749</b></li>
+          <li data-name="Zinger Roll" data-price="699">Zinger Roll <b class="pr">Rs. 699</b></li>
+          <li data-name="Mughlai Roll" data-price="699">Mughlai Roll <b class="pr">Rs. 699</b></li>
+          <li data-name="Saporous Special Platter" data-price="1099">Saporous Special Platter <b class="pr">Rs. 1099</b></li>
+          <li data-name="Malai Botti Platter" data-price="1049">Malai Botti Platter <b class="pr">Rs. 1049</b></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="tag">Fast Food</span>
+        <h3><span class="cat-icon">&#127828;</span>Krispo, Wings &amp; More</h3>
+        <ul>
+          <li data-name="Oven Bake Wings" data-price="599">Oven Bake Wings <b class="pr">Rs. 599</b></li>
+          <li data-name="Loaded Wings" data-price="699">Loaded Wings <b class="pr">Rs. 699</b></li>
+          <li data-name="Crispy Wings" data-price="380">Crispy Wings <b class="pr">Rs. 380</b></li>
+          <li data-name="Saporous Zinger Burger">Saporous Zinger Burger <b class="pr na">Price on WhatsApp</b><span>Krispo Burgers</span></li>
+          <li data-name="Chicken Burger">Chicken Burger <b class="pr na">Price on WhatsApp</b><span>Krispo Burgers</span></li>
+          <li data-name="Saporous Special Cheesy Sandwich">Saporous Special Cheesy Sandwich <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Malai Boti Sandwich">Malai Boti Sandwich <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Deluxe Sandwich">Deluxe Sandwich <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Classic Sandwich">Classic Sandwich <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Chicken Broast">Chicken Broast <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Chicken Nuggets">Chicken Nuggets <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Chicken Donuts">Chicken Donuts <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Chicken Poppers">Chicken Poppers <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Loaded Pizza Fries">Loaded Pizza Fries <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Plane Fries">Plane Fries <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Masala Fries">Masala Fries <b class="pr na">Price on WhatsApp</b></li>
+          <li data-name="Mayo Garlic Fries">Mayo Garlic Fries <b class="pr na">Price on WhatsApp</b></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="tag">Sweet Endings</span>
+        <h3><span class="cat-icon">&#127856;</span>Sweets, Ice-Cream &amp; Drinks</h3>
+        <ul>
+          <li data-name="Zarda" data-price="199">Zarda <b class="pr">Rs. 199</b></li>
+          <li data-name="Kheer (Single Person)" data-price="199">Kheer (Single Person) <b class="pr">Rs. 199</b></li>
+          <li data-name="Kheer Box (Three Person)" data-price="399">Kheer Box (Three Person) <b class="pr">Rs. 399</b></li>
+          <li data-name="Ice-Cream (One Scoop)" data-price="100">Ice-Cream (One Scoop) <b class="pr">Rs. 100</b><span>Pista, Kulfa, Vanilla, Mango, Strawberry, Praline, Chocolate</span></li>
+          <li data-name="Ice-Cream (Two Scoop)" data-price="190">Ice-Cream (Two Scoop) <b class="pr">Rs. 190</b></li>
+          <li data-name="Ice-Cream (Three Scoop)" data-price="280">Ice-Cream (Three Scoop) <b class="pr">Rs. 280</b></li>
+          <li data-name="Ice-Cream (Six Scoop Family Pack)" data-price="520">Ice-Cream (Six Scoop Family Pack) <b class="pr">Rs. 520</b></li>
+          <li data-name="Drink (345ml)" data-price="80">Drink (345ml) <b class="pr">Rs. 80</b></li>
+          <li data-name="Tin Pack (250ml)" data-price="150">Tin Pack (250ml) <b class="pr">Rs. 150</b></li>
+          <li data-name="Cold Drink (500ml)" data-price="130">Cold Drink (500ml) <b class="pr">Rs. 130</b></li>
+          <li data-name="Cold Drink (1 Litre)" data-price="180">Cold Drink (1 Litre) <b class="pr">Rs. 180</b></li>
+          <li data-name="Cold Drink (1.5 Litre)" data-price="220">Cold Drink (1.5 Litre) <b class="pr">Rs. 220</b></li>
+          <li data-name="Mineral Water (Small)" data-price="70">Mineral Water (Small) <b class="pr">Rs. 70</b></li>
+          <li data-name="Mineral Water (Large)" data-price="120">Mineral Water (Large) <b class="pr">Rs. 120</b></li>
+          <li data-name="Special Tea" data-price="120">Special Tea <b class="pr">Rs. 120</b></li>
+          <li data-name="Green Tea" data-price="80">Green Tea <b class="pr">Rs. 80</b></li>
+          <li data-name="Capechano Coffee" data-price="399">Capechano Coffee <b class="pr">Rs. 399</b></li>
+          <li data-name="Late Coffe" data-price="380">Late Coffe <b class="pr">Rs. 380</b></li>
+          <li data-name="Expresso Coffe" data-price="350">Expresso Coffe <b class="pr">Rs. 350</b></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEALS ============ -->
+<section id="deals">
+  <div class="wrap">
+    <h2>Deals</h2>
+    <p class="sub">Pizza deals, value deals &amp; family packs &mdash; sab Add to Cart se order karein.</p>
+    <div class="grid">
+
+      <div class="card">
+        <span class="tag">Pizza Deals</span>
+        <h3>Krispo &amp; Pizza Deals</h3>
+        <ul>
+          <li data-name="Single Slice Delight Deal" data-price="750">Single Slice Delight Deal <b class="pr">Rs. 750</b><span>1 Small Pizza + Drink 500ml</span></li>
+          <li data-name="Perfect Pie Deal" data-price="1550">Perfect Pie Deal <b class="pr">Rs. 1550</b><span>1 Medium Pizza + 1 Litre Drink</span></li>
+          <li data-name="Party Pack Deal" data-price="1999">Party Pack Deal <b class="pr">Rs. 1999</b><span>1 Large Pizza + 1.5 Litre Drink</span></li>
+          <li data-name="Couple's Cravy Deal" data-price="2999">Couple&rsquo;s Cravy Deal <b class="pr">Rs. 2999</b><span>2 Medium Pizza + 1.5 Litre Drink</span></li>
+          <li data-name="Double Trouble Deal" data-price="2250">Double Trouble Deal <b class="pr">Rs. 2250</b><span>1 Small Pizza + 1 Medium Pizza + 1.5 Litre Drink</span></li>
+          <li data-name="Family Deal (Pizza)" data-price="3650">Family Deal <b class="pr">Rs. 3650</b><span>2 Large Pizza + 2.25 Litre Drink</span></li>
+          <li data-name="Friend Zone Deal" data-price="3450">Friend Zone Deal <b class="pr">Rs. 3450</b><span>1 Medium Pizza + 1 Large Pizza + 2.25 Litre Drink</span></li>
+          <li data-name="Birthday Feast Deal" data-price="4990">Birthday Feast Deal <b class="pr">Rs. 4990</b><span>1 Medium Pizza + 1 Large Pizza + 2 Zinger Burger + 2 Single Pulao + 2.25 Litre Drink</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="tag">Value Deals</span>
+        <h3>Deals</h3>
+        <ul>
+          <li data-name="Deal-01" data-price="699">Deal-01 <b class="pr">Rs. 699</b><span>1 Zinger Burger + French Fries + Drink 345ml</span></li>
+          <li data-name="Deal-02" data-price="999">Deal-02 <b class="pr">Rs. 999</b><span>1 Zinger Burger + 2 Shawarma + 2 Drink 345ml</span></li>
+          <li data-name="Deal-03" data-price="850">Deal-03 <b class="pr">Rs. 850</b><span>3 Shawarma + 3 Drink 345ml</span></li>
+          <li data-name="Deal-04" data-price="1649">Deal-04 <b class="pr">Rs. 1649</b><span>2 Zinger Burger + 2 Shawarma + French Fries + 2 Drink 345ml</span></li>
+          <li data-name="Deal-05" data-price="1550">Deal-05 <b class="pr">Rs. 1550</b><span>3 Zinger Burger + 3 Drink 345ml</span></li>
+          <li data-name="Deal-06" data-price="2420">Deal-06 <b class="pr">Rs. 2420</b><span>5 Zinger Burger + Drink 1.5 L</span></li>
+          <li data-name="Deal-07" data-price="870">Deal-07 <b class="pr">Rs. 870</b><span>1 Chicken Burger + 1 Chicken Shawarma + French Fries + 2 Drink 345ml</span></li>
+          <li data-name="Kids Deal" data-price="1249">Kids Deal <b class="pr">Rs. 1249</b><span>4 Nuggets + 4 Poppers + 4 Donuts + French Fries + Drink 1 L</span></li>
+          <li data-name="Family Deal (Value)" data-price="1950">Family Deal <b class="pr">Rs. 1950</b><span>2 Zinger Burger + 2 Chicken Burger + French Fries + Drink 1.5 L</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAIG ============ -->
+<section id="daig">
+  <div class="wrap">
+    <h2>Bulk Daig Orders</h2>
+    <p class="sub">Shadi, dawat ya family gathering? Daig bulk mein order karein &mdash; fresh, on time, Multan bhar mein.</p>
+    <div class="daig">
+      <ul>
+        <li data-name="Plain Pulao Daig (10kg Rice)" data-price="10000">Plain Pulao Daig (10kg Rice) <b class="pr">Rs. 10000</b></li>
+        <li data-name="Chana Pulao Daig (10kg Rice, 2kg Chana)" data-price="12000">Chana Pulao Daig <b class="pr">Rs. 12000</b><span>10kg Rice, 2kg Chana</span></li>
+        <li data-name="Vegetable Pulao Daig (10kg Rice)" data-price="12000">Vegetable Pulao Daig (10kg Rice) <b class="pr">Rs. 12000</b></li>
+        <li data-name="Chicken Pulao Daig (10kg Rice, 6kg Chicken)" data-price="17000">Chicken Pulao Daig <b class="pr">Rs. 17000</b><span>10kg Rice, 6kg Chicken</span></li>
+        <li data-name="Chicken Biryani Daig (10kg Rice, 10kg Chicken)" data-price="20000">Chicken Biryani Daig <b class="pr">Rs. 20000</b><span>10kg Rice, 10kg Chicken</span></li>
+        <li data-name="Chicken Qorma Daig (10kg Chicken)" data-price="16000">Chicken Qorma Daig (10kg Chicken) <b class="pr">Rs. 16000</b></li>
+        <li data-name="Mutton Pulao Daig (10kg Rice, 6kg Mutton)" data-price="28000">Mutton Pulao Daig <b class="pr">Rs. 28000</b><span>10kg Rice, 6kg Mutton</span></li>
+        <li data-name="Mutton Biryani Daig (10kg Rice, 10kg Mutton)" data-price="38000">Mutton Biryani Daig <b class="pr">Rs. 38000</b><span>10kg Rice, 10kg Mutton</span></li>
+        <li data-name="Mutton Qorma Daig (10kg Mutton)" data-price="36000">Mutton Qorma Daig (10kg Mutton) <b class="pr">Rs. 36000</b></li>
+        <li data-name="Beef Pulao Daig (10kg Rice, 6kg Beef)" data-price="20000">Beef Pulao Daig <b class="pr">Rs. 20000</b><span>10kg Rice, 6kg Beef</span></li>
+        <li data-name="Beef Qorma Daig (10kg)" data-price="19000">Beef Qorma Daig (10kg) <b class="pr">Rs. 19000</b></li>
+        <li data-name="Zarda Daig (10kg Rice)" data-price="15000">Zarda Daig (10kg Rice) <b class="pr">Rs. 15000</b></li>
+        <li data-name="Kheer Daig (per Kg, min 8 Kg)" data-price="1000">Kheer Daig (per Kg) <b class="pr">Rs. 1000/Kg</b><span>Minimum order 8 Kg</span></li>
+      </ul>
+      <p style="margin-top:18px"><a class="btn" href="https://wa.me/923091555506?text=Assalam-o-Alaikum!%20I%20want%20to%20book%20a%20bulk%20Daig%20order%20from%20Saporous%20Foods%20Multan.">Book Daig on WhatsApp</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <h2>Visit Us</h2>
+    <p class="sub">Grand opening 1 November 2026 &mdash; now open daily 9 AM &ndash; 1 AM.</p>
+    <div class="visit">
+      <div>
+        <h3>Saporous Foods &mdash; Gulgasht, Multan</h3>
+        <p>Bosan Road, Gulgasht Colony, opposite Emerson University, Multan<br>WhatsApp: 0309-1555506 &bull; 0314-1575506 &bull; Landline: 061-2115500<br>Email: saporousfoodsmultan@gmail.com</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/923091555506?text=Assalam-o-Alaikum!%20I%20want%20to%20order%20from%20Saporous%20Foods%20Multan.">WhatsApp Order</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Saporous+Foods+Bosan+Road+Gulgasht+Multan">Get Directions</a>
+      </div>
+    </div>
+
+    <div class="contact-lines">
+      <div class="card">
+        <span class="tag">Hours</span>
+        <h3>Opening Hours</h3>
+        <p><b>Daily:</b> 9:00 AM &ndash; 1:00 AM<br><b>Home delivery:</b> Rs. 30 / order<br><b>Dine-in, takeaway &amp; delivery</b></p>
+      </div>
+      <div class="card">
+        <span class="tag">Follow Us</span>
+        <h3>Social Media</h3>
+        <p><b>Instagram:</b> @saporousfoodsmultan<br><b>Facebook &amp; TikTok:</b> saporousfoods<br><b>Email:</b> saporousfoodsmultan@gmail.com</p>
+      </div>
+      <div class="card">
+        <span class="tag">Events</span>
+        <h3>Birthdays &amp; Gatherings</h3>
+        <p>Family hall, birthdays aur gatherings ke liye perfect &mdash; bulk Daig orders aur deals ke liye WhatsApp par rabta karein.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">SAPOROUS <span style="color:var(--pink)">FOODS</span></div>
+    <p style="margin-top:10px">
+      Instagram: @saporousfoodsmultan &nbsp;&middot;&nbsp;
+      Facebook &amp; TikTok: saporousfoods &nbsp;&middot;&nbsp;
+      <a href="tel:+923091555506">0309-1555506</a> &nbsp;&middot;&nbsp;
+      <a href="tel:+923141575506">0314-1575506</a>
+    </p>
+    <p style="margin-top:8px">Open daily 9 AM &ndash; 1 AM &bull; Dine-in, takeaway &amp; home delivery (Rs. 30 / order)</p>
+  </div>
+</footer>
+
+<button class="cart-fab" id="cartFab" onclick="toggleCart(true)">View Cart <span class="count" id="cartCount">0</span></button>
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Your order">
+  <div class="cart-head"><h3>Your Order</h3><button onclick="toggleCart(false)" aria-label="Close">&times;</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-foot">
+    <div id="cartSummary"></div>
+    <p class="cart-note">Delivery Rs. 30 / order. &ldquo;Price on WhatsApp&rdquo; wali items ki price WhatsApp par confirm hogi.</p>
+    <button class="btn" style="width:100%" onclick="confirmOrder()">Confirm Order on WhatsApp</button>
+    <button class="btn btn-ghost" style="width:100%;margin-top:8px" onclick="clearCart()">Clear Cart</button>
+  </div>
+</aside>
+
+<script>
+/* ---- hero slider: 3 slides, 3 dots ---- */
+var slides = document.querySelectorAll('.slide');
+var dots = document.querySelectorAll('.dot');
+var currentSlide = 0;
+var slideTimer = null;
+
+function goToSlide(i) {
+  currentSlide = (i + slides.length) % slides.length;
+  slides.forEach(function (s, idx) { s.classList.toggle('active', idx === currentSlide); });
+  dots.forEach(function (d, idx) { d.classList.toggle('active', idx === currentSlide); });
+  restartAutoSlide();
+}
+function nextSlide() { goToSlide(currentSlide + 1); }
+function restartAutoSlide() {
+  clearInterval(slideTimer);
+  slideTimer = setInterval(nextSlide, 3000);
+}
+restartAutoSlide();
+
+/* swipe left/right on the hero */
+var slider = document.getElementById('heroSlider');
+var touchX = null;
+slider.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+slider.addEventListener('touchend', function (e) {
+  if (touchX == null) return;
+  var dx = e.changedTouches[0].clientX - touchX;
+  if (dx < -40) nextSlide();
+  else if (dx > 40) goToSlide(currentSlide - 1);
+  touchX = null;
+}, { passive: true });
+
+/* ---- cart ---- */
+var WA_NUMBER = '923091555506';
+var DELIVERY_FEE = 30;
+var cart = {};
+
+function addToCart(name, price) {
+  if (!cart[name]) cart[name] = { qty: 0, price: (price == null ? null : price) };
+  cart[name].qty++;
+  renderCart();
+  var fab = document.getElementById('cartFab');
+  fab.classList.remove('bump');
+  void fab.offsetWidth;
+  fab.classList.add('bump');
+}
+function changeQty(name, d) {
+  if (!cart[name]) return;
+  cart[name].qty += d;
+  if (cart[name].qty <= 0) delete cart[name];
+  renderCart();
+}
+function cartTotals() {
+  var names = Object.keys(cart), count = 0, subtotal = 0, hasUnpriced = false;
+  names.forEach(function (n) {
+    count += cart[n].qty;
+    if (cart[n].price != null) subtotal += cart[n].price * cart[n].qty;
+    else hasUnpriced = true;
+  });
+  return { names: names, count: count, subtotal: subtotal, hasUnpriced: hasUnpriced };
+}
+function renderCart() {
+  var t = cartTotals();
+  var fab = document.getElementById('cartFab');
+  fab.style.display = t.count ? 'flex' : 'none';
+  document.getElementById('cartCount').textContent = t.count;
+  Object.keys(itemControls).forEach(renderItemControl);
+  var box = document.getElementById('cartItems');
+  if (!t.names.length) {
+    box.innerHTML = '<p class="cart-empty">Cart khaali hai &mdash; menu se kuch add karein.</p>';
+  } else {
+    box.innerHTML = t.names.map(function (n) {
+      var it = cart[n];
+      var pr = it.price != null ? 'Rs. ' + (it.price * it.qty) : 'Price on WhatsApp';
+      return '<div class="cart-item"><div><div class="nm">' + n + '</div><div class="pr">' + pr + '</div></div>' +
+        '<div class="qty"><button onclick="changeQty(\'' + n.replace(/'/g, "\\'") + '\',-1)">&minus;</button><b>' + it.qty + '</b>' +
+        '<button onclick="changeQty(\'' + n.replace(/'/g, "\\'") + '\',1)">+</button></div></div>';
+    }).join('');
+  }
+  var s = document.getElementById('cartSummary');
+  if (!t.names.length) { s.innerHTML = ''; return; }
+  var total = t.subtotal + DELIVERY_FEE;
+  s.innerHTML = '<div class="cart-line"><span>Subtotal</span><span>Rs. ' + t.subtotal + '</span></div>' +
+    '<div class="cart-line"><span>Delivery</span><span>Rs. ' + DELIVERY_FEE + '</span></div>' +
+    '<div class="cart-total"><span>Total</span><span>Rs. ' + total + (t.hasUnpriced ? ' +' : '') + '</span></div>';
+}
+function toggleCart(open) {
+  document.getElementById('cartDrawer').classList.toggle('open', open);
+  document.getElementById('cartOverlay').classList.toggle('open', open);
+}
+function clearCart() {
+  cart = {};
+  renderCart();
+}
+function confirmOrder() {
+  var t = cartTotals();
+  if (!t.names.length) { alert('Cart khaali hai — pehle kuch add karein.'); return; }
+  var lines = ['Assalam-o-Alaikum! I want to order from Saporous Foods Multan:', ''];
+  t.names.forEach(function (n) {
+    var it = cart[n];
+    lines.push('\u2022 ' + it.qty + 'x ' + n + (it.price != null ? ' \u2014 Rs. ' + (it.price * it.qty) : ' (price on WhatsApp)'));
+  });
+  lines.push('');
+  lines.push('Subtotal: Rs. ' + t.subtotal);
+  lines.push('Delivery: Rs. ' + DELIVERY_FEE);
+  lines.push('Total: Rs. ' + (t.subtotal + DELIVERY_FEE) + (t.hasUnpriced ? ' + (unpriced items)' : ''));
+  lines.push('');
+  lines.push('Please confirm total price and delivery time. Thank you!');
+  window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+}
+/* menu item controls: Add button becomes a - qty + stepper once added */
+var itemControls = {};
+function renderItemControl(name) {
+  var c = itemControls[name];
+  if (!c) return;
+  var qty = cart[name] ? cart[name].qty : 0;
+  c.wrap.innerHTML = '';
+  if (qty === 0) {
+    var b = document.createElement('button');
+    b.className = 'add-btn';
+    b.textContent = 'Add +';
+    b.onclick = function () { addToCart(name, c.price); };
+    c.wrap.appendChild(b);
+  } else {
+    var st = document.createElement('span');
+    st.className = 'stepper';
+    var minus = document.createElement('button');
+    minus.textContent = '\u2212';
+    minus.setAttribute('aria-label', 'Remove one');
+    minus.onclick = function () { changeQty(name, -1); };
+    var n = document.createElement('b');
+    n.textContent = qty;
+    var plus = document.createElement('button');
+    plus.textContent = '+';
+    plus.setAttribute('aria-label', 'Add one more');
+    plus.onclick = function () { addToCart(name, c.price); };
+    st.appendChild(minus);
+    st.appendChild(n);
+    st.appendChild(plus);
+    c.wrap.appendChild(st);
+  }
+}
+document.querySelectorAll('[data-name]').forEach(function (el) {
+  var name = el.dataset.name;
+  var price = el.dataset.price ? parseInt(el.dataset.price, 10) : null;
+  var wrap = document.createElement('span');
+  wrap.className = 'item-control';
+  el.appendChild(wrap);
+  itemControls[name] = { wrap: wrap, price: price };
+  renderItemControl(name);
+});
+renderCart();
+</script>
+
+</body>
+</html>
